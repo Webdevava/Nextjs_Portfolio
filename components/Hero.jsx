@@ -52,7 +52,7 @@ const Hero = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="p-2 w-full work flex justify-between border border-zinc-800 rounded-md"
+            className="p-2 w-full work flex justify-between border border-zinc-800 flex-col lg:flex-row rounded-md"
           >
             <span 
             className="flex items-center text-md lg:text-xl">

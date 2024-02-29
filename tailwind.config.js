@@ -14,5 +14,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('postcss-import'),
+    require('tailwindcss/nesting'), // Make sure you have installed postcss-nesting
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
 };

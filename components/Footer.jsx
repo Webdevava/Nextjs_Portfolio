@@ -21,19 +21,19 @@ const Footer = () => {
               </a>
             </li>
             <li className="hover:opacity-50">
-              <a href="http://github.com/Webdevava" className="">
+              <a href="https://www.linkedin.com/in/ankur-auti-862953250/" className="">
                 LinkedIn
               </a>
             </li>
             <li className="hover:opacity-50">
               {" "}
-              <a href="http://github.com/Webdevava" className="">
+              <a href="https://twitter.com/ankur_auti" className="">
                 Twitter/X
               </a>
             </li>
             <li className="hover:opacity-50">
               {" "}
-              <a href="http://github.com/Webdevava" className="">
+              <a href="https://www.instagram.com/ankurauti382/" className="">
                 Instagram
               </a>
             </li>

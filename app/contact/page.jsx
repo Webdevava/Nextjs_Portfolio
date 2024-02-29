@@ -48,7 +48,7 @@ const Contact = () => {
                 </span>
               </a>
               <a
-                href="https://github.com/webdevava"
+                href="https://www.linkedin.com/in/ankur-auti-862953250/"
                 className="border border-zinc-800 rounded-md p-4 w-full flex justify-center"
               >
                 <span>
@@ -56,7 +56,7 @@ const Contact = () => {
                 </span>
               </a>
               <a
-                href="https://github.com/webdevava"
+                href="https://twitter.com/ankur_auti"
                 className="border border-zinc-800 rounded-md p-4 w-full flex justify-center"
               >
                 <span>
@@ -64,7 +64,7 @@ const Contact = () => {
                 </span>
               </a>
               <a
-                href="https://github.com/webdevava"
+                href="https://www.instagram.com/ankurauti382/"
                 className="border border-zinc-800 rounded-md p-4 w-full flex justify-center"
               >
                 <span>

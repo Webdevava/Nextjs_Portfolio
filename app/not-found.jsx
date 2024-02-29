@@ -1,12 +1,10 @@
-
+'use client'
 import { Home, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 
 const Error = () => {
-
-
 
   return (
     <motion.div  className="px-4 lg:px-16 py-20">

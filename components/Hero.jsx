@@ -59,7 +59,7 @@ const Hero = () => {
               <Dot className="animate-blink" color="green" size={40} />
               Available for Work
             </span>
-            <Link href="/contact" className="border border-zinc-800 px-6 py-1 text-md lg:text-xl rounded-md">
+            <Link href="/contact" className="border border-zinc-800 px-6 py-1 text-md lg:text-xl rounded-md text-center">
               Let&apos;s Connect!
             </Link>
           </motion.div>

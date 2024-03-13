@@ -2,22 +2,22 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const icons = [
+  "https://skillicons.dev/icons?i=tailwind  ",
   "https://skillicons.dev/icons?i=js",
-  "https://skillicons.dev/icons?i=react",
-  "https://skillicons.dev/icons?i=bash",
-  "https://skillicons.dev/icons?i=git ",
-  "https://skillicons.dev/icons?i=java  ",
   "https://skillicons.dev/icons?i=jquery  ",
-  "https://skillicons.dev/icons?i=laravel ",
-  "https://skillicons.dev/icons?i=linux   ",
-  "https://skillicons.dev/icons?i=mongodb ",
-  "https://skillicons.dev/icons?i=mysql ",
+  "https://skillicons.dev/icons?i=react",
   "https://skillicons.dev/icons?i=nextjs  ",
   "https://skillicons.dev/icons?i=nodejs  ",
-  "https://skillicons.dev/icons?i=php ",
+  "https://skillicons.dev/icons?i=mongodb ",
+  "https://skillicons.dev/icons?i=mysql ",
   "https://skillicons.dev/icons?i=postgres  ",
+  "https://skillicons.dev/icons?i=php ",
+  "https://skillicons.dev/icons?i=laravel ",
   "https://skillicons.dev/icons?i=py  ",
-  "https://skillicons.dev/icons?i=tailwind  ",
+  "https://skillicons.dev/icons?i=java  ",
+  "https://skillicons.dev/icons?i=git ",
+  "https://skillicons.dev/icons?i=linux   ",
+  "https://skillicons.dev/icons?i=bash",
 ];
 
 const Stack = () => {

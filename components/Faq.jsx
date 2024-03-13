@@ -64,7 +64,7 @@ const Faq = () => {
   }, [controls, inView]);
 
   return (
-    <div className="px-8 py-12 lg:p-12">
+    <div className="px-4 py-12 lg:p-12">
       {faqs.map((faq, i) => (
         <div key={i} ref={ref}>
           <motion.div
@@ -75,12 +75,12 @@ const Faq = () => {
             animate={controls}
             custom={i}
           >
-            <h1 className="text-neutral-600">{i + 1}. {" "}{faq.question}</h1>
+            <h1 className=" opacity-90 text-2xl" >{i + 1}. {" "}{faq.question}</h1>
             {isOpen === i ? <ChevronUp /> : <ChevronDown />}
           </motion.div>
           {isOpen === i && (
             <motion.p
-              className="border border-zinc-800 mb-2 rounded-md p-3 text-lg text-neutral-600"
+              className="border border-zinc-800 mb-2 rounded-md p-3 text-lg opacity-80"
               initial={{ opacity: 0, height: "auto" }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

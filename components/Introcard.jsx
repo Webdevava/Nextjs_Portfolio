@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Introcard = ({ name, image }) => {
   return (
-    <div className="px-8 py-10 lg:px-24">
+    <div className="px-4 py-10 lg:px-24">
       {!image && (
         <motion.div
           initial={{ opacity: 0 }}

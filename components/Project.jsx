@@ -21,12 +21,12 @@ const Project = ({ title, desc, date, image, service, url, repo }) => {
   }
 
   return (
-    <div className="px-8 py-12 lg:pl-24 relative">
+    <div className="px-4 py-12 lg:pl-24 relative">
       <motion.div
         ref={ref}
         initial={{ x: "100%" }}
         animate={controls}
-        className="rounded-xl  flex border border-zinc-800  flex-col lg:flex-row project relative "
+        className="rounded-xl flex border border-zinc-800  flex-col lg:flex-row md:flex-row project relative "
       >
         <a
           href={url}
@@ -35,7 +35,7 @@ const Project = ({ title, desc, date, image, service, url, repo }) => {
           <MoveLeft fill="#fefefe" />
         </a>
 
-        <a href={repo} className="image overflow-hidden flex-2 aspect-video imgContainer">
+        <a href={repo} className="image overflow-hidden flex-2 aspect-video imgContainer flex-1">
           <img
             src={image}
             alt="project pic"
@@ -43,7 +43,7 @@ const Project = ({ title, desc, date, image, service, url, repo }) => {
           />
         </a>
 
-        <div className="desc p-4 flex h-full w-full infoContainer">
+        <div className="desc p-4 flex h-full w-full infoContainer flex-1">
           <div className="flex flex-col rounded-lg border border-zinc-800 p-2 gap-4">
             <div className="flex flex-col">
               <h2 className="text-xl font-semibold">Project</h2>

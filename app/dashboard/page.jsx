@@ -96,7 +96,7 @@ const Dashboard = () => {
     <div className="w-full">
       <Introcard name={"Dashboard"} />
 
-      <div className="px-8 lg:px-24 py-5 lg:py-10 flex flex-col gap-10">
+      <div className="px-4 lg:px-24 py-5 lg:py-10 flex flex-col gap-10">
         <AnimatedDiv>
           
               <div className="p-4 flex flex-col border border-zinc-800 rounded-lg ">

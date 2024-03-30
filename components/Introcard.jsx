@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const Introcard = ({ name, image }) => {
   return (
-    <div className="px-4 py-10 lg:px-24">
+    <div className="px-4 py-10 lg:px-24 ">
       {!image && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.75 }}
-          className="flex justify-start items-end border border-zinc-800 rounded-md h-72 lg:h-96 p-4 bg-radial-pattern"
+          className="flex justify-start items-end border-2 border-primary rounded-md h-72 lg:h-96 p-4 bg-radial-pattern bg-gradient "
         >
           <motion.h1
             initial={{ y: '-500%'}}
@@ -27,7 +27,7 @@ const Introcard = ({ name, image }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.75 }}
-          className="w-full border border-zinc-800 rounded-xl flex flex-col-reverse lg:flex-row lg:p-5 gap-4 h-fit mb-6 p-4 bg-radial-pattern"
+          className="w-full border-2 border-ring rounded-xl flex flex-col-reverse lg:flex-row lg:p-5 gap-4 h-fit mb-6 p-4 bg-radial-pattern"
         >
           <motion.div
             style={{ flex: 3 }}
@@ -42,7 +42,7 @@ const Introcard = ({ name, image }) => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.45 }}
-            className="myimage border border-zinc-800 rounded-md bg-zinc-900 overflow-hidden"
+            className="myimage border-2 border-ring rounded-md bg-secondary overflow-hidden"
           >
             <Image
             height={400}

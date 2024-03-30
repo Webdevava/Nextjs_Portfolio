@@ -2,45 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 
 @font-face {
   font-family: marby;
   src: url("../assets/Syne-VariableFont_wght.ttf");
 }
 
-:root{
-  --bg:#0f0f0f;
-  --fn:#f0f0f0;
-}
+
+@layer base {
+
+  :root  {
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: linear-gradient(135deg,hsl(var(--background)),hsl(var(--border)));
+
+    // --gradient: linear-gradient(to top left,#283048,#859398);
+    --background: 239 96.45% 98.44%;
+    --foreground: 239 2.9% 0.88%;
+
+    --muted: 239 2.9% 92.2%;
+    --muted-foreground: 239 1.45% 42.2%;
+
+    --popover: 239 66.8% 92.2%;
+    --popover-foreground: 239 2.9% 1.1%;
+
+    --card: 239 66.8% 92.2%;
+    --card-foreground: 239 2.9% 1.1%;
+
+    --border: 239 7.9% 89.88%;
+    --input: 239 7.9% 89.88%;
+
+    --primary: 239 29% 22%;
+    --primary-foreground: 239 0.58% 92.2%;
+
+    --secondary: 239 1.45% 96.1%;
+    --secondary-foreground: 239 2.7399999999999998% 12.2%;
+
+    --accent: 239 1.45% 96.1%;
+    --accent-foreground: 239 2.7399999999999998% 12.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 239 29% 22%;
+
+    --radius: 0.5rem;
+  }
+  .dark  {
+    --gradient: linear-gradient(to bottom right,hsl(var(--background)),hsl(var(--border)));
+
+    --background: 198 14.3% 2.08%;
+    --foreground: 198 2.2% 96.3%;
+
+    --muted: 198 11% 7.800000000000001%;
+    --muted-foreground: 198 2.2% 52.6%;
+
+    --popover: 198 60.6% 3.38%;
+    --popover-foreground: 198 2.2% 96.3%;
+
+    --card: 198 60.6% 3.38%;
+    --card-foreground: 198 2.2% 96.3%;
+
+    --border: 198 11% 7.800000000000001%;
+    --input: 198 11% 7.800000000000001%;
+
+    --primary: 198 22% 26%;
+    --primary-foreground: 198 2.2% 96.3%;
+
+    --secondary: 198 11% 7.800000000000001%;
+    --secondary-foreground: 198 2.2% 96.3%;
+
+    --accent: 198 11% 7.800000000000001%;
+    --accent-foreground: 198 2.2% 96.3%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 198 2.2% 96.3%;
+
+    --ring: 198 22% 26%;
+    --radius: 0.5rem;
+
+  }
+
+  .bg-gradient {
+    background: var(--gradient);
+  }
+  
+  }
+  
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
 
 * {
   margin: 0;
@@ -48,12 +103,14 @@ body {
   box-sizing: border-box;
 }
 
+
 body {
-  color: var(--fn);
-  background: var(--bg);
+  // color: hsl(var(--foreground));
+  // background: hsl(var(--background));
   font-family: marby;
   overflow-x: hidden;
   padding: 0;
+  
 }
 
 
@@ -63,9 +120,9 @@ body {
   .projectBtn{
     top: 50%;
     left: 0px;
-    scale: 0.5;
-    background-color: var(--bg);
-    color: var(--fn);
+    scale: 0.05;
+    background: var(--gradient);
+    color: hsl(var(--foreground));
     transition: all .25s ease;
 
   }
@@ -86,17 +143,16 @@ body {
     left: -30px;
     scale: 1;
 
-    background-color: var(--fn);
-    color: var(--bg);
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
     transition: all .25s ease;
   }
 }
 
 .bg-radial-pattern {
-  /* background-color: #313131; */
-  background-image: radial-gradient(rgba(136, 136, 136, 0.171) 2px, transparent 0);
+  background-image: radial-gradient(hsl(var(--muted-foreground)) 2px, transparent 0);
   background-size: 30px 30px;
-  background-position: -5px -5px
+  background-position: 5px 4px;
 }
 
 /* Custom scrollbar styles */
@@ -105,11 +161,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0f0f;
+  background: hsl(var(--card));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #494949;
+  background: hsl(var(--muted-foreground));
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -118,8 +174,9 @@ body {
 
 .connectBtn {
   span {
-    background-color:var(--bg);
-    color: var(--fn);
+    background: var(--gradient);
+    color: hsl(var(--foreground));
+
     transition: scale 0.5s ease;
 
   }
@@ -133,8 +190,8 @@ body {
 .connectBtn:hover {
   span {
 
-    background-color:var(--fn);
-    color: var(--bg);
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
     scale: 1.15;
     transition: scale 0.5s ease;
   }
@@ -155,15 +212,23 @@ body {
 @keyframes blink {
   0% {
     opacity: 0;
+    scale: 0.1;
   }
   50% {
     opacity: 1;
+    scale: 1.25;
   }
   100% {
     opacity: 0;
+    scale: 0.1;
+
   }
 }
 
 .animate-blink {
   animation: blink 2s infinite;
+}
+
+.project-flip:nth-child(even) {
+  flex-direction: row-reverse;
 }

@@ -1,19 +1,18 @@
-'use client'
+"use client";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Faq = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: true });
-
-  const [isOpen, setIsOpen] = useState(-1);
-
-  const handleOpen = (index) => {
-    setIsOpen((prev) => (prev === index ? -1 : index));
-  };
 
   const faqs = [
     {
@@ -46,7 +45,7 @@ const Faq = () => {
       answer:
         "To start a project with me, please contact me through the [Contact Me] section on my portfolio. Provide some details about your project, and I'll get back to you to schedule a consultation and discuss the next steps.",
     },
-];
+  ];
 
   const faqVariants = {
     hidden: { x: -50, opacity: 0 },
@@ -65,32 +64,37 @@ const Faq = () => {
 
   return (
     <div className="px-4 py-12 lg:p-12">
-      {faqs.map((faq, i) => (
-        <div key={i} ref={ref}>
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full flex flex-col gap-2"
+      >
+        {faqs.map((faq, i) => (
           <motion.div
-            className="mt-4 cursor-pointer flex justify-between items-center border border-zinc-800 text-2xl p-4 rounded-md"
-            onClick={() => handleOpen(i)}
+            className="w-full"
             variants={faqVariants}
             initial="hidden"
             animate={controls}
             custom={i}
           >
-            <h1 className=" opacity-90 text-2xl" >{i + 1}. {" "}{faq.question}</h1>
-            {isOpen === i ? <ChevronUp /> : <ChevronDown />}
-          </motion.div>
-          {isOpen === i && (
-            <motion.p
-              className="border border-zinc-800 mb-2 rounded-md p-3 text-lg opacity-80"
-              initial={{ opacity: 0, height: "auto" }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
+            <AccordionItem
+              value={i.toString()}
+              key={i}
+              ref={ref}
+              className=" bg-gradient rounded-md border-2 border-ring"
             >
-              {faq.answer}
-            </motion.p>
-          )}
-        </div>
-      ))}
+              <AccordionTrigger className="text-2xl text-start px-2 py-4 rounded-t-md border-b-0">
+                {faq.question}
+              </AccordionTrigger>
+
+              <AccordionContent className="text-xl text-foreground/95 font-light  rounded-b-md p-2 border-t-0">
+                <hr className="border-foreground/50 mb-3" />
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          </motion.div>
+        ))}
+      </Accordion>
     </div>
   );
 };

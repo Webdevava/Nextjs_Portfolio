@@ -12,7 +12,7 @@ const Error = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75 }}
-        className="w-full border border-zinc-800 rounded-xl flex flex-col-reverse lg:flex-row p-2 lg:p-5 gap-4 h-fit mb-12"
+        className="w-full border-2 border-ring bg-gradient rounded-xl flex flex-col-reverse lg:flex-row p-2 lg:p-5 gap-4 h-fit mb-12"
       >
         <div
           style={{ flex: 3 }}
@@ -22,11 +22,11 @@ const Error = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="flex flex-col items-center  border border-zinc-800 rounded-md p-4"
+            className="flex flex-col items-center  border-2 border-ring  bg-background rounded-md p-4"
           >
             <h1 className="lg:text-7xl text-4xl my-2">404</h1>
-            <hr className="border-zinc-500 my-3 w-full" />
-            <h2 className="lg:text-5xl text-3xl text-zinc-600 my-2 font-medium ">
+            <hr className=" border-2 my-3 w-full" />
+            <h2 className="lg:text-5xl text-3xl text-foreground/75 my-2 font-medium ">
               Page Not Found!
             </h2>
           </motion.div>
@@ -34,7 +34,7 @@ const Error = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="intro p-4 text-lg text-center text-zinc-600 font-medium border border-zinc-800 rounded-md"
+            className="intro p-4 text-lg text-center text-foreground/75 font-medium border-2 border-ring rounded-md  bg-background"
           >
             The page you were looking for might have been moved, deleted, or
             never existed.
@@ -45,7 +45,7 @@ const Error = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.35 }}
-              className="p-2 w-full  border border-zinc-800 rounded-md"
+              className="p-2 w-full  border-2 border-ring rounded-md  bg-background"
             >
             <Link href="/" className="w-full h-full flex justify-center gap-2 text-xl">
             <Home/> Back Home
@@ -55,7 +55,7 @@ const Error = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, delay: 0.35 }}
-              className="p-2 w-full border border-zinc-800 rounded-md"
+              className="p-2 w-full border-2 border-ring rounded-md  bg-background"
             >
             <Link href="/contact" className="w-full h-full flex justify-center gap-2 text-xl">
             <MessageSquare/> Contact me

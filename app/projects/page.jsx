@@ -35,7 +35,7 @@ const Projects = () => {
         </div>
       ) : (
         projects.length === 0 ? (
-          <div className=" h-72 lg:h-96 flex flex-col justify-center items-center gap-4 border border-zinc-800 rounded-lg w-1full">
+          <div className=" h-72 lg:h-96 flex flex-col justify-center items-center gap-4 border-2 border-zinc-800 rounded-lg w-1full">
           <Frown size={60}/>
             <p className="text-2xl">No projects to show!!!</p>
           </div>

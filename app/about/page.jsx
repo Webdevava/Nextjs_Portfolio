@@ -51,6 +51,28 @@ const About = () => {
 
       <Divider name="Experience" />
       <div className=" flex flex-col px-8  lg:px-24 py-5 lg:py-10 gap-10">
+        
+        <AnimatedDiv>
+          <div className="p-4 flex flex-col border-2 border-ring rounded-lg bg-gradient ">
+            <h1 className="text-3xl">Junior Full Stack Developer</h1>
+            <p className=" text-foreground/85">
+              Inditronics PVT. LTD.
+              <span className="text-sm"> (March 2024 - Present)</span>
+            </p>
+            <hr className="w-full bg-ring h-0.5 my-4" />
+            <p className="text-lg font-semibold text-foreground/80">
+              At Inditronics, I am primarily focused on server-side development
+              and AWS for integrating IoT devices with web applications. My work
+              involves developing scalable server-side solutions, integrating
+              AWS services such as S3 and DynamoDB for storage, IoT core for
+              managing IoT devices and implementing authentication APIs for
+              secure communication between IoT devices and the web. I also work
+              on monitoring and managing roles for efficient operation of the
+              IoT portal.
+            </p>
+          </div>
+        </AnimatedDiv>
+        
         <AnimatedDiv>
           <div className="p-4 flex flex-col border-2 border-ring rounded-lg bg-gradient  ">
             <h1 className="text-3xl">Full Stack Developer Intern</h1>
@@ -69,26 +91,6 @@ const About = () => {
           </div>
         </AnimatedDiv>
 
-        <AnimatedDiv>
-          <div className="p-4 flex flex-col border-2 border-ring rounded-lg bg-gradient ">
-            <h1 className="text-3xl">Junior Full Stack Developer</h1>
-            <p className=" text-foreground/85">
-              Inditronics PVT. LTD.
-              <span className="text-sm"> (March 2024 - Present)</span>
-            </p>
-            <hr className="w-full bg-ring h-0.5 my-4" />
-            <p className="text-lg font-semibold text-foreground/80">
-              At Inditronics, I am primarily focused on server-side development
-              and AWS for integrating IoT devices with web applications. My work
-              involves developing scalable server-side solutions, integrating
-              AWS services such as S3 and DynamoDB for storage,IoT core for
-              managing IoT devices and implementing authentication APIs for
-              secure communication between IoT devices and the web. I also work
-              on monitoring and managing roles for efficient operation of the
-              IoT portal.
-            </p>
-          </div>
-        </AnimatedDiv>
       </div>
 
       <LetsConnect />
